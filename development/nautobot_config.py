@@ -55,9 +55,21 @@ LOGGING["loggers"]["nautobot"]["level"] = LOG_LEVEL  # noqa: F405
 # Plugins
 #
 
-PLUGINS = [
-    "example_app",
-]
+PLUGINS = ["example_app", "nautobot_golden_config"]
+
+PLUGINS_CONFIG = {
+    "nautobot_golden_config": {
+        "enable_golden_config_backup": True,
+        "enable_golden_config_compliance": True,
+        "enable_golden_config_intended": True,
+        "enable_golden_config_sotagg": True,
+        "sot_agg_transposer": None,
+        "per_feature_bar_width": 0.15,
+        "per_feature_width": 13,
+        "per_feature_height": 4,
+        "get_custom_compliance": None,
+    },
+}
 
 CORS_ALLOWED_ORIGINS = ["http://localhost:3000"]
 CORS_ALLOW_CREDENTIALS = True

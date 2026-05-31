@@ -117,6 +117,7 @@ dependencies = [
     "social-auth-app-django (>=5.7.0,<5.8)",
     # Rendering of SVG images (for rack elevations, etc.)
     "svgwrite (>=1.4.3,<1.5)",
+    "nautobot-golden-config (>=3.0.5,<4.0.0)",
 ]
 
 [project.optional-dependencies]
